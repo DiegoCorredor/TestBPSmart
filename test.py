@@ -90,12 +90,12 @@ for i in range(len(tojson1)):
         'id_persona_pd': f'{id_persona_pd[i]}'
     }
     json_dt['exported'].append(array_json)
-
+#exportar a archivo json
 with open("test.json","w") as arch_json:
     arch_json.write(json.dumps(json_dt))
-
+#convertir el json a dataframe
 dfclean = pd.DataFrame(data=json_dt)
-#filtros
-print(productos_tipo_ART = dfclean['id_pro_letra'] == "art")
+#los filtros no pude hacerlos, algo me fallo al exportar al dataframe y no pude colocar el nombre de cada columna
+
 
 print("Json exportado con exito")
